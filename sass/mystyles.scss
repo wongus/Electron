@@ -1,0 +1,129 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand&display=swap");
+
+// Set your brand colors
+$linen: #f7ede2;
+$yellowred: #f6bd60;
+$morningblue: #84a59d;
+$lightcoral: #f28482;
+$blackchocolate: #402A12;
+
+
+$white: $linen;
+$black: $blackchocolate;
+$danger: $lightcoral;
+$warning: $yellowred;
+$success: $morningblue;
+
+// Update Bulma's global variables
+$family-sans-serif: "Cutive Mono",
+sans-serif;
+
+html,
+body {
+    overflow-y: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    box-shadow: 6px 6px 12px #d2c9c0,
+        -6px -6px 12px #ffffff;
+}
+
+.logo {
+    font-weight: normal;
+    font-family: 'Quicksand'
+}
+
+.title {
+    font-family: 'Quicksand';
+    z-index: 2;
+}
+
+.hero {
+    border-radius: 0 0 50% 50%;
+}
+
+.svg {
+    width: 50rem;
+    height: auto;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mouse {
+    width: 2.5rem;
+    height: 5rem;
+    border: 2px solid $black;
+    border-radius: 2rem;
+    margin-bottom: .5rem;
+    display: flex;
+}
+
+.mouse span {
+    width: 1rem;
+    height: 1rem;
+    background-color: $black;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-wheel 1.5s linear infinite;
+}
+
+.arrow span {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid transparent;
+    border-right-color: $black;
+    border-bottom-color: $black;
+    transform: rotate(45deg);
+    animation: move-arrow 1s alternate infinite;
+}
+
+@keyframes move-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes move-arrow {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .50;
+    }
+
+    75% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@import "../node_modules/bulma/bulma.sass";
